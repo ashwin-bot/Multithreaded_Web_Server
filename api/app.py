@@ -6,8 +6,11 @@ app = Flask(__name__)
 
 @app.route("/api/user", methods=["POST"])
 def user():
-    username = request.form["username"]
-    return jsonify(f"Received: {username}")
+    # This changes are made to test driftwatch. 
+    #username = request.form["username"]
+    #return jsonify(f"Received: {username}")
+    user_id = request.form["user_id"]
+    return jsonify(f"Received: {user_id}")
 
 if __name__ == "__main__":
     current_dir = os.path.dirname(os.path.abspath(__file__))
